@@ -5,4 +5,9 @@ public class Category {
     private String categoryName;
     private Long parentId;
 
+    public Category(Long id, String categoryName, Long parentId) {
+        this.id = id;
+        this.categoryName = categoryName;
+        this.parentId = parentId;
+    }
 }
