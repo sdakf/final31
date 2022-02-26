@@ -54,7 +54,8 @@ public class CustomerService {
     public Map<BigDecimal, Long> countBySalaryWithStream() {
         return Arrays.stream(people)
                 .collect(Collectors.groupingBy(c -> c.getSalary(), Collectors.counting()));
-
     }
+
+
 }
 
