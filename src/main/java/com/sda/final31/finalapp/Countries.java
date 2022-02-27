@@ -1,4 +1,4 @@
-package com.sda.final31;
+package com.sda.final31.finalapp;
 
 import lombok.Getter;
 

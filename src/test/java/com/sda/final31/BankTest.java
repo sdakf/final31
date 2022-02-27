@@ -1,12 +1,12 @@
 package com.sda.final31;
 
+import com.sda.final31.excercises.threads.Bank;
+import com.sda.final31.excercises.threads.ClientOperations;
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class BankTest {
 

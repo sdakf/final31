@@ -1,5 +1,6 @@
 package com.sda.final31;
 
+import com.sda.final31.excercises.others.Car;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;

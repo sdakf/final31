@@ -1,11 +1,10 @@
-package com.sda.final31;
+package com.sda.final31.finalapp.categories;
 
 import com.google.common.io.Resources;
 
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.Charset;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;

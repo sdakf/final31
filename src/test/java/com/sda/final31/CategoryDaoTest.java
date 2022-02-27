@@ -1,5 +1,7 @@
 package com.sda.final31;
 
+import com.sda.final31.finalapp.categories.Category;
+import com.sda.final31.finalapp.categories.CategoryDao;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
