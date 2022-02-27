@@ -11,6 +11,8 @@ public class UserController {
 
     @GetMapping("/register")
     public String displayForm(Model model) {
+        model.addAttribute("countries", Countries.values());
+        model.addAttribute("emptyObject", new UserRegistrationDto());
         return "registerPage";
     }
 

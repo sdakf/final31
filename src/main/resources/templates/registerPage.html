@@ -5,8 +5,28 @@
     <title>registration</title>
 </head>
 <body>
-<form action="/register" method="post">
-    <input type="text" placeholder="firstName">
+<form action="/register" method="post" th:object="${emptyObject}">
+    <input th:field="*{firstName}" type="text" placeholder="firstName"><br>
+    <input th:field="*{surname}" type="text" placeholder="surname"><br>
+    <input th:field="*{email}" type="text" placeholder="email"><br>
+    <input th:field="*{password}" type="text" placeholder="password"><br>
+    <input th:field="*{city}" type="text" placeholder="city"><br>
+    <select th:field="*{country}">
+        <option value=""> Wybierz</option>
+        <option th:each="c : ${countries}"
+                th:text="${c.getPolishName()}"
+                th:value="${c.getSymbol()}">
+        </option>
+    </select><br>
+    <input th:field="*{street}" type="text" placeholder="street"><br>
+    <input th:field="*{birthDate}" type="text" placeholder="birthDate"><br>
+    <input th:field="*{pesel}" type="text" placeholder="pesel"><br>
+    <input th:field="*{email}" type="text" placeholder="email"><br>
+    <input th:field="*{password}" type="text" placeholder="password"><br>
+    <input th:field="*{phoneNumber}" type="text" placeholder="phoneNumber"><br>
+
+
+
     <button>Utwórz konto</button>
 
     <p th:text="${txt}"></p>
