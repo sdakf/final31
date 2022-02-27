@@ -11,7 +11,6 @@ public class UserController {
 
     @GetMapping("/register")
     public String displayForm(Model model) {
-        model.addAttribute("aaaatxt", "Napis " + System.currentTimeMillis());
         return "registerPage";
     }
 
