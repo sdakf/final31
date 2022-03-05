@@ -22,10 +22,13 @@ public class UserController {
 
     @PostMapping("/register")
     public String register(@ModelAttribute UserRegistrationDto dto, Model model) {
-        UserListDto userListDto = userService.saveUser(dto);
-        model.addAttribute("fn", "Imię: " + userListDto.getFirstName());
-        model.addAttribute("sn", "Nazwisko: " + userListDto.getSurname());
-        model.addAttribute("city", "Miasto: " + userListDto);
+        try {
+            UserListDto userListDto = userService.saveUser(dto);
+        } catch (UserValidationException e) {
+            model.addAttribute("emptyObject", dto);
+            model.addAllAttributes(e.getErrorMap());
+            return "registerPage";
+        }
         return "welcomePage"; //nazwa pliku html
     }
 }

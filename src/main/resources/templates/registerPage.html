@@ -7,6 +7,8 @@
 <body>
 <form action="/register" method="post" th:object="${emptyObject}">
     <input th:field="*{firstName}" type="text" placeholder="firstName"><br>
+    <p th:text="${firstNameError}" th:if="${firstNameError}"></p><br/>
+
     <input th:field="*{surname}" type="text" placeholder="surname"><br>
     <input th:field="*{email}" type="text" placeholder="email"><br>
     <input th:field="*{password}" type="text" placeholder="password"><br>
