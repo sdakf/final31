@@ -2,7 +2,7 @@ package com.sda.final31.excercises.others;
 
 import java.util.Objects;
 
-public class SameHashCar {
+public class SameHashCar implements Comparable<SameHashCar>{
 
     private String model;
     private String vin;
@@ -33,5 +33,10 @@ public class SameHashCar {
                 ", vin='" + vin + '\'' +
                 ", colour='" + colour + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(SameHashCar otherCar) {
+        return this.vin.compareTo(otherCar.vin);
     }
 }

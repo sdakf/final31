@@ -2,7 +2,9 @@ package com.sda.final31.finalapp.categories;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
 @Controller
 public class CategoryController {
 
@@ -10,10 +12,10 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @GetMapping("/categories")
-    public String showCategories(){
-        return "categoryPage";
+    public String showCategories(Model model) {
+        model.addAttribute("categoriesData", categoryService.findCategories());
+        return "categoriesPage";
     }
 
-    
 
 }

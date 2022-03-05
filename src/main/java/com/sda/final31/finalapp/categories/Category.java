@@ -1,5 +1,8 @@
 package com.sda.final31.finalapp.categories;
 
+import lombok.Getter;
+
+@Getter
 public class Category {
     private Long id;
     private String categoryName;

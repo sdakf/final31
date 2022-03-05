@@ -77,6 +77,7 @@ public class TestTest {
         System.out.println(list1);
 
     }
+
     @Test
     void collectionSpeedSet() {
         List<Integer> list1 = new ArrayList<>();
@@ -92,5 +93,28 @@ public class TestTest {
         set.removeAll(list1);
         System.out.println(set);
 
+    }
+
+    @Test
+    void treeSet2() {
+        Set<String> animals = new TreeSet<>();
+        animals.add("mouse");
+        animals.add("cat");
+        animals.add("hamster");
+        animals.add("rabbit");
+        System.out.println(animals);
+    }
+
+    @Test
+    void carsTreeSet() {
+        SameHashCar car1 = new SameHashCar("Audi", "124");
+        SameHashCar car2 = new SameHashCar("Audi", "124");
+        SameHashCar car3 = new SameHashCar("Audi", "125");
+
+        Set<SameHashCar> cars = new TreeSet<>();
+        cars.add(car1);
+        cars.add(car2);
+        cars.add(car3);
+        System.out.println(cars);
     }
 }

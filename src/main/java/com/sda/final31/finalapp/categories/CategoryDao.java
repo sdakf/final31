@@ -1,6 +1,7 @@
 package com.sda.final31.finalapp.categories;
 
 import com.google.common.io.Resources;
+import lombok.Getter;
 
 import java.io.IOException;
 import java.net.URL;
@@ -13,7 +14,8 @@ import java.util.stream.Collectors;
 //SINGLETON z palca
 public class CategoryDao {
 
-    private List<Category> categoryList;
+    @Getter
+    private List<Category> categoryList = createCategories();
 
     private static CategoryDao INSTANCE;
 
