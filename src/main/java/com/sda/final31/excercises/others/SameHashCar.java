@@ -2,13 +2,13 @@ package com.sda.final31.excercises.others;
 
 import java.util.Objects;
 
-public class Car {
+public class SameHashCar {
 
     private String model;
     private String vin;
     private String colour;
 
-    public Car(String model, String vin) {
+    public SameHashCar(String model, String vin) {
         this.model = model;
         this.vin = vin;
     }
@@ -17,13 +17,13 @@ public class Car {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Car car = (Car) o;
+        SameHashCar car = (SameHashCar) o;
         return Objects.equals(vin, car.vin);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(vin);
+        return 4;
     }
 
     @Override

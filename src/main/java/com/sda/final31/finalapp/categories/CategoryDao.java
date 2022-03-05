@@ -20,7 +20,7 @@ public class CategoryDao {
     private CategoryDao() {
     }
 
-    static CategoryDao getInstance() {
+    public static CategoryDao getInstance() {
         if (INSTANCE == null) {
             synchronized (CategoryDao.class) {
                 if (INSTANCE == null) {
